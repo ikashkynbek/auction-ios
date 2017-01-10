@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		493C3FE01E25163000032378 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C3FDE1E25163000032378 /* Auction.swift */; };
+		493C3FE11E25163000032378 /* AuctionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C3FDF1E25163000032378 /* AuctionService.swift */; };
+		493C3FE31E25163B00032378 /* AuctionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C3FE21E25163B00032378 /* AuctionTableViewController.swift */; };
 		49DEB3BB1E23A24A00DB0EFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEB3BA1E23A24A00DB0EFB /* AppDelegate.swift */; };
 		49DEB3BD1E23A24A00DB0EFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEB3BC1E23A24A00DB0EFB /* ViewController.swift */; };
 		49DEB3C01E23A24A00DB0EFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DEB3BE1E23A24A00DB0EFB /* Main.storyboard */; };
 		49DEB3C21E23A24A00DB0EFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DEB3C11E23A24A00DB0EFB /* Assets.xcassets */; };
 		49DEB3C51E23A24A00DB0EFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DEB3C31E23A24A00DB0EFB /* LaunchScreen.storyboard */; };
+		DC90E9EF8E1B8413AEA2A427 /* Pods_auction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCD5727C3BB0991DDB94E8E /* Pods_auction.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		197474DB74641C447C40C901 /* Pods-auction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-auction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-auction/Pods-auction.debug.xcconfig"; sourceTree = "<group>"; };
+		493C3FDE1E25163000032378 /* Auction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Auction.swift; path = auction/Auction.swift; sourceTree = "<group>"; };
+		493C3FDF1E25163000032378 /* AuctionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuctionService.swift; path = auction/AuctionService.swift; sourceTree = "<group>"; };
+		493C3FE21E25163B00032378 /* AuctionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionTableViewController.swift; sourceTree = "<group>"; };
 		49DEB3B71E23A24A00DB0EFB /* auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DEB3BA1E23A24A00DB0EFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DEB3BC1E23A24A00DB0EFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,8 @@
 		49DEB3C11E23A24A00DB0EFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49DEB3C41E23A24A00DB0EFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49DEB3C61E23A24A00DB0EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCD5727C3BB0991DDB94E8E /* Pods_auction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_auction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41CEFC304A3213E0C961503 /* Pods-auction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-auction.release.xcconfig"; path = "Pods/Target Support Files/Pods-auction/Pods-auction.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC90E9EF8E1B8413AEA2A427 /* Pods_auction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		229053B0208CD24F553A81B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				197474DB74641C447C40C901 /* Pods-auction.debug.xcconfig */,
+				F41CEFC304A3213E0C961503 /* Pods-auction.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		34AFFF82012058CD8ECC80EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDCD5727C3BB0991DDB94E8E /* Pods_auction.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		493C3FDD1E25161100032378 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				493C3FDE1E25163000032378 /* Auction.swift */,
+				493C3FDF1E25163000032378 /* AuctionService.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		49DEB3AE1E23A24A00DB0EFB = {
 			isa = PBXGroup;
 			children = (
+				493C3FDD1E25161100032378 /* models */,
 				49DEB3B91E23A24A00DB0EFB /* auction */,
 				49DEB3B81E23A24A00DB0EFB /* Products */,
+				229053B0208CD24F553A81B3 /* Pods */,
+				34AFFF82012058CD8ECC80EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +94,7 @@
 		49DEB3B91E23A24A00DB0EFB /* auction */ = {
 			isa = PBXGroup;
 			children = (
+				493C3FE21E25163B00032378 /* AuctionTableViewController.swift */,
 				49DEB3BA1E23A24A00DB0EFB /* AppDelegate.swift */,
 				49DEB3BC1E23A24A00DB0EFB /* ViewController.swift */,
 				49DEB3BE1E23A24A00DB0EFB /* Main.storyboard */,
@@ -71,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49DEB3C91E23A24A00DB0EFB /* Build configuration list for PBXNativeTarget "auction" */;
 			buildPhases = (
+				A746E764AE456124CC104795 /* [CP] Check Pods Manifest.lock */,
 				49DEB3B31E23A24A00DB0EFB /* Sources */,
 				49DEB3B41E23A24A00DB0EFB /* Frameworks */,
 				49DEB3B51E23A24A00DB0EFB /* Resources */,
+				4599558A096FC3E21B0121B4 /* [CP] Embed Pods Frameworks */,
+				CFE2D690002344283E32F141 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +176,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4599558A096FC3E21B0121B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-auction/Pods-auction-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A746E764AE456124CC104795 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CFE2D690002344283E32F141 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-auction/Pods-auction-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49DEB3B31E23A24A00DB0EFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				49DEB3BD1E23A24A00DB0EFB /* ViewController.swift in Sources */,
+				493C3FE01E25163000032378 /* Auction.swift in Sources */,
 				49DEB3BB1E23A24A00DB0EFB /* AppDelegate.swift in Sources */,
+				493C3FE11E25163000032378 /* AuctionService.swift in Sources */,
+				493C3FE31E25163B00032378 /* AuctionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +352,7 @@
 		};
 		49DEB3CA1E23A24A00DB0EFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 197474DB74641C447C40C901 /* Pods-auction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S2BA39Q3DE;
@@ -270,6 +366,7 @@
 		};
 		49DEB3CB1E23A24A00DB0EFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F41CEFC304A3213E0C961503 /* Pods-auction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S2BA39Q3DE;
@@ -300,6 +397,7 @@
 				49DEB3CB1E23A24A00DB0EFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
