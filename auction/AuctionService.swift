@@ -24,6 +24,7 @@ class AuctionService {
                     let json = JSON(value)
 //                    print("JSON: \(json)")
                     let auctions = self.parseAuction(jsonArray: json["data"].array!)!
+//                    print("auctions: \(auctions)")
                     completion(auctions)
                 case .failure(let error):
                     print(error)
@@ -33,9 +34,12 @@ class AuctionService {
     
     func parseAuction(jsonArray: [JSON]) -> [Auction]? {
         return jsonArray.flatMap{ jsonItem -> Auction? in
-            guard let description = jsonItem["productName"].string
-            else {return nil}
-            return Auction(description: description)
+            let description = jsonItem["product_name"].stringValue
+            let price = jsonItem["best_offer"].doubleValue
+            let ordersQty = jsonItem["orders_count"].intValue
+            let maxPrice = jsonItem["order_max"].doubleValue
+            let minPrice = jsonItem["order_min"].doubleValue
+            return Auction(description: description, price: price, ordersQty:ordersQty, maxPrice: maxPrice, minPrice: minPrice)
         }
     }
 
