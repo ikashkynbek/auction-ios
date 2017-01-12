@@ -13,11 +13,9 @@ class AuctionTableViewController: UITableViewController {
     var apiService:AuctionService!
     var auctions = [Auction]()
     var currencySymbol:String!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        
         currencySymbol = getSymbolForCurrencyCode(code: "KZT")
         apiService = AuctionService()
         
@@ -57,6 +55,18 @@ class AuctionTableViewController: UITableViewController {
         cell.profit.text = String(format:"%.2f", a.maxPrice - a.minPrice) + currencySymbol
         
         return cell
+    }
+    
+
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let detailsView = self.storyboard?.instantiateViewController(withIdentifier: "ActionDetails") as? AuctionDetailsViewController
+        self.present(detailsView!, animated: true, completion: nil)
+
     }
     
     func getSymbolForCurrencyCode(code: String) -> String? {

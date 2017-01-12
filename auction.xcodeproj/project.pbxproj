@@ -11,6 +11,7 @@
 		493C3FE11E25163000032378 /* AuctionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C3FDF1E25163000032378 /* AuctionService.swift */; };
 		493C3FE31E25163B00032378 /* AuctionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C3FE21E25163B00032378 /* AuctionTableViewController.swift */; };
 		49862C8B1E261FA6005FBD6C /* AuctionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49862C8A1E261FA6005FBD6C /* AuctionCell.swift */; };
+		49862C8D1E26668E005FBD6C /* AuctionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49862C8C1E26668E005FBD6C /* AuctionDetailsViewController.swift */; };
 		49DEB3BB1E23A24A00DB0EFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEB3BA1E23A24A00DB0EFB /* AppDelegate.swift */; };
 		49DEB3BD1E23A24A00DB0EFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEB3BC1E23A24A00DB0EFB /* ViewController.swift */; };
 		49DEB3C01E23A24A00DB0EFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DEB3BE1E23A24A00DB0EFB /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		493C3FDF1E25163000032378 /* AuctionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuctionService.swift; path = auction/AuctionService.swift; sourceTree = "<group>"; };
 		493C3FE21E25163B00032378 /* AuctionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionTableViewController.swift; sourceTree = "<group>"; };
 		49862C8A1E261FA6005FBD6C /* AuctionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionCell.swift; sourceTree = "<group>"; };
+		49862C8C1E26668E005FBD6C /* AuctionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionDetailsViewController.swift; sourceTree = "<group>"; };
 		49DEB3B71E23A24A00DB0EFB /* auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DEB3BA1E23A24A00DB0EFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DEB3BC1E23A24A00DB0EFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				49DEB3C11E23A24A00DB0EFB /* Assets.xcassets */,
 				49DEB3C31E23A24A00DB0EFB /* LaunchScreen.storyboard */,
 				49DEB3C61E23A24A00DB0EFB /* Info.plist */,
+				49862C8C1E26668E005FBD6C /* AuctionDetailsViewController.swift */,
 			);
 			path = auction;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				49DEB3BD1E23A24A00DB0EFB /* ViewController.swift in Sources */,
 				493C3FE01E25163000032378 /* Auction.swift in Sources */,
+				49862C8D1E26668E005FBD6C /* AuctionDetailsViewController.swift in Sources */,
 				49DEB3BB1E23A24A00DB0EFB /* AppDelegate.swift in Sources */,
 				49862C8B1E261FA6005FBD6C /* AuctionCell.swift in Sources */,
 				493C3FE11E25163000032378 /* AuctionService.swift in Sources */,
