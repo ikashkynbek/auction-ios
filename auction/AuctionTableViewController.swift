@@ -60,12 +60,14 @@ class AuctionTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
-
         tableView.deselectRow(at: indexPath, animated: true)
 
         let detailsView = self.storyboard?.instantiateViewController(withIdentifier: "ActionDetails") as? AuctionDetailsViewController
-        self.present(detailsView!, animated: true, completion: nil)
+//        self.present(detailsView!, animated: true, completion: nil)
+        
+//        let detailsView = AuctionDetailsViewController()
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.pushViewController(detailsView!, animated: true)
 
     }
     

@@ -8,12 +8,34 @@
 
 import UIKit
 
-class AuctionDetailsViewController: UIViewController {
+class AuctionDetailsViewController: UIViewController, UIScrollViewDelegate {
 
+    
+    @IBOutlet var imagesScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let rightButtonItem:UIBarButtonItem = UIBarButtonItem(title: "Подписаться", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AuctionDetailsViewController.printme))
+        self.navigationItem.rightBarButtonItem = rightButtonItem
+
+        let scrollViewWidth:CGFloat = self.imagesScrollView.frame.width
+        let scrollViewHeight:CGFloat = self.imagesScrollView.frame.height - 10
+        
+        let imageArray = [#imageLiteral(resourceName: "image1"), #imageLiteral(resourceName: "image2"), #imageLiteral(resourceName: "image3"), #imageLiteral(resourceName: "image4"), #imageLiteral(resourceName: "image5")]
+        
+        for i in 0..<imageArray.count {
+            let imageView = UIImageView(image: imageArray[i])
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
+            imageView.frame.size.width = scrollViewWidth
+            imageView.frame.size.height = scrollViewHeight
+            imageView.frame.origin.x = (scrollViewWidth * CGFloat(i))
+            imageView.center.y = 10
+            imagesScrollView.addSubview(imageView)
+        }
+
+        self.imagesScrollView.contentSize = CGSize(width:scrollViewWidth * CGFloat(imageArray.count), height:1.0)
+        self.imagesScrollView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
