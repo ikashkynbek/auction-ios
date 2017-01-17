@@ -8,12 +8,13 @@
 
 import UIKit
 
-class AuctionDetailsViewController: UIViewController, UIScrollViewDelegate {
+class AuctionDetailsViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet var mainScrollView: UIScrollView!
     @IBOutlet var imagesScrollView: UIScrollView!
     @IBOutlet var mainDescription: UILabel!
+    @IBOutlet var propertiesTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,26 +41,55 @@ class AuctionDetailsViewController: UIViewController, UIScrollViewDelegate {
         self.imagesScrollView.contentSize = CGSize(width:scrollViewWidth * CGFloat(imageArray.count), height:1.0)
         self.imagesScrollView.delegate = self
         
-//        mainDescription.text = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        self.propertiesTable.register(UITableViewCell.self, forCellReuseIdentifier: "PropertyCell")
+        propertiesTable.delegate = self
+        propertiesTable.dataSource = self
+        
+//        print(propertiesTable.frame.size.height)
+//        print(mainScrollView.frame.size.height)
+//        propertiesTable.frame.size.height = propertiesTable.frame.size.height + 3000
+//        mainScrollView.contentSize = CGSize(width: self.view.frame.width, height: 3000)
+        
+//        print(propertiesTable.frame.size.height)
+//        print(mainScrollView.frame.size.height)
+        
+        mainScrollView.contentSize = CGSize(width: mainScrollView.frame.size.width, height: 3000);
+
     }
 
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PropertyCell", for: indexPath)
+        cell.textLabel?.text = "axaxax"
+        // Configure the cell...
+        
+        return cell
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+
+        let oldTableHeight = propertiesTable.frame.size.height
+        propertiesTable.frame.size.height = 45 * CGFloat(propertiesTable.numberOfRows(inSection: 0))
+        let scrollHeight = mainScrollView.frame.size.height - oldTableHeight + propertiesTable.frame.size.height
+        mainScrollView.contentSize = CGSize(width: mainScrollView.frame.size.width, height: scrollHeight);
+    }
+
+    
     func printme() {
         print("asdasdasd")
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    } 
 }
